@@ -157,7 +157,7 @@ def scrap_vccircle():
         while loop:
             for div in body.find_all("div", {"class": "listingPage_article-list__EecoW"}):
                 time = div.find("div", {"class": "newsCard_date__AxIUu"}).text
-                print(time)
+               
                 if current_timestamp in time:
                     a = div.find("h4").find("a")
                     title = a.text
