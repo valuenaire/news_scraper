@@ -1,3 +1,4 @@
 @echo off
-
-python "%~dp0\news-scraper.py"
+echo "Your script will be running soon..."
+python3 "news_scraper.py"
+pause

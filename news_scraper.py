@@ -183,7 +183,7 @@ def scrap_ft():
     url = "https://www.ft.com/mergers-acquisitions"
     webPage = req.get(url)
     body = BS(webPage.content, "html.parser")
-    timestamp = datetime.now(timezone.utc).strftime("%-d %B, %Y")
+    timestamp = datetime.now(timezone.utc).strftime("%d %B, %Y").lstrip('0')
     for li in body.find_all("li", {"class": "o-teaser-collection__item"}):
         time = li.find("time")
         div= li.find("div", {"class": "o-teaser__heading"})
